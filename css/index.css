@@ -1,0 +1,69 @@
+
+h1, h2, h3, h4, h5, h6 {
+   margin-top: 1em;
+   border-bottom: solid 1px #e1e1e1;
+}
+
+.header {
+   color: #e0e0e0;
+   background: #333;
+   border: solid 1px #000;
+   box-shadow: #000 0 0 3px;
+}
+
+.header h1 {
+   border: none;
+   margin-top: 0.5rem;
+}
+
+.header .link {
+   color: #e0e0e0;
+   text-align: center;
+}
+
+.header .link-active {
+   background: #444;
+}
+
+.header .link a {
+   display: block;
+   line-height: 52px;
+   margin: 0;
+   color: #e0e0e0;
+   text-decoration: none;
+}
+
+.main input {
+   text-align: right;
+}
+
+.result {
+   overflow-x: scroll;
+   min-height: 480px;
+}
+
+#table {
+   margin-left: 1rem;
+   margin-right: 1rem;
+}
+
+.footer {
+   padding: 0.75rem;
+   border: solid 1px #000;
+   color: #e0e0e0;
+   background: #333;
+   box-shadow: #000 0 0 3px;
+   text-align: right;
+}
+
+.message {
+   margin: 1rem 0;
+   padding: 1rem 2rem;
+   border: solid 1px #ccc;
+   background: #f0f0f0;
+   border-radius: 3px;
+}
+
+#sysMessage {
+   background: #f0f0f0;
+}

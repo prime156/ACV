@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ACV Assemble Search</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="./favicon.ico">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/skeleton-custom.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+<div class="header">
+   <div class="container">
+      <div class="row">
+         <div class="eight columns">
+            <h1>ACV Assemble Search</h1>
+         </div>
+         <div class="two columns link link-active">
+            <a href="#">Search</a>
+         </div>
+         <div class="two columns link">
+            <a href="view.html">Parts Data</a>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="main">
+
+   <div class="container">
+
+      <h2>検索条件</h2>
+      <form>
+
+         <!-- <h3>総合性能</h3> -->
+         <div class="row">
+            <div class="two columns">
+               <label>AP</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ap_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ap_max">
+            </div>
+
+            <div class="two columns">
+               <label>KE</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ke_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ke_max">
+            </div>
+
+            <div class="two columns">
+               <label>CE</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ce_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ce_max">
+            </div>
+
+            <div class="two columns">
+               <label>TE</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="te_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="te_max">
+            </div>
+
+            <div class="two columns">
+               <label>消費EN</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="en_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="en_max">
+            </div>
+
+            <div class="two columns">
+               <label>余積載</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="weight_cap_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="weight_cap_max">
+            </div>
+         </div>
+
+         <!-- <h3>脚部</h3> -->
+         <div class="row">
+            <div class="two columns">
+               <label for="legs_type">種別</label>
+               <select class="u-full-width" id="legs_type">
+                  <option value="軽二">軽量二脚</option>
+                  <option value="中二" selected>中量二脚</option>
+                  <option value="重二">重量二脚</option>
+                  <option value="軽逆">軽量逆関節</option>
+                  <option value="重逆">重量逆関節</option>
+                  <option value="四脚">四脚</option>
+                  <option value="タンク">タンク</option>
+               </select>
+            </div>
+
+            <div class="two columns">
+               <label>移動制御</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_move_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_move_max">
+            </div>
+
+            <div class="two columns">
+               <label>姿勢制御</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_stab_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_stab_max">
+            </div>
+
+            <div class="two columns">
+               <label>旋回性能</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_turn_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_turn_max">
+            </div>
+         </div>
+
+         <!-- <h3>頭部 / 腕部 / 胸部</h3> -->
+         <div class="row">
+            <div class="two columns">
+               <label>安定演算性能</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_stab_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_stab_max">
+            </div>
+
+            <div class="two columns">
+               <label>カメラ性能</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_cam_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_cam_max">
+            </div>
+
+            <div class="two columns">
+               <label>スキャン性能</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_scan_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_scan_max">
+            </div>
+
+            <div class="two columns">
+               <label>射撃安定性能</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_stab_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_stab_max">
+            </div>
+
+            <div class="two columns">
+               <label>格納数</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_cap_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_cap_max">
+            </div>
+
+            <div class="two columns">
+               <label>EN伝達率</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="core_supp_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="core_supp_max">
+            </div>
+         </div>
+
+         <div class="row" style="margin-top: 1rem;">
+            <div class="twelve columns">
+               <input class="u-full-width button-primary" type="button" value="Submit" id="btn_submit">
+            </div>
+         </div>
+
+         <div class="row" style="margin-top: 1rem;">
+            <div class="twelve columns">
+               <input class="u-full-width" type="text" value="" id="sysMessage">
+            </div>
+         </div>
+      </form>
+
+
+   </div><!-- /.container -->
+</div><!-- .main -->
+
+<div class="result">
+   <div class="container">
+      <h2>検索結果</h2>
+   </div>
+
+   <div id="table"></div>
+</div>
+
+<div class="footer">
+   <div class="container">
+      Since 2018
+   </div>
+</div>
+
+<script src="js/parts.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
