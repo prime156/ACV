@@ -48,20 +48,20 @@
 
             <div class="two columns">
                <label>KE</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ke_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ke_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ke_min" list="list-ke">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ke_max" list="list-ke">
             </div>
 
             <div class="two columns">
                <label>CE</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ce_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ce_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="ce_min" list="list-ce">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="ce_max" list="list-ce">
             </div>
 
             <div class="two columns">
                <label>TE</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="te_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="te_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="te_min" list="list-te">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="te_max" list="list-te">
             </div>
 
             <div class="two columns">
@@ -81,7 +81,7 @@
          <div class="row">
             <div class="two columns">
                <label for="legs_type">種別</label>
-               <select class="u-full-width" id="legs_type">
+               <select class="u-full-width" id="legs_type" onChange="toggleDatalist(this.value);">
                   <option value="軽二">軽量二脚</option>
                   <option value="中二" selected>中量二脚</option>
                   <option value="重二">重量二脚</option>
@@ -94,20 +94,26 @@
 
             <div class="two columns">
                <label>移動制御</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_move_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_move_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_move_min" list="list-legs_move-2LEGS-M">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_move_max" list="list-legs_move-2LEGS-M">
             </div>
 
             <div class="two columns">
                <label>姿勢制御</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_stab_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_stab_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_stab_min" list="list-legs_stab-2LEGS-M">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_stab_max" list="list-legs_stab-2LEGS-M">
             </div>
 
             <div class="two columns">
                <label>旋回性能</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_turn_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_turn_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="legs_turn_min" list="list-legs_turn-2LEGS-M">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="legs_turn_max" list="list-legs_turn-2LEGS-M">
+            </div>
+
+            <div class="two columns" style="margin-left: 21.3333333333%;">
+               <label>対反動上限予測</label>
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="stab_min">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="stab_max">
             </div>
          </div>
 
@@ -115,38 +121,38 @@
          <div class="row">
             <div class="two columns">
                <label>安定演算性能</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_stab_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_stab_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_stab_min" list="list-head_stab">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_stab_max" list="list-head_stab">
             </div>
 
             <div class="two columns">
                <label>カメラ性能</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_cam_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_cam_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_cam_min" list="list-head_cam">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_cam_max" list="list-head_cam">
             </div>
 
             <div class="two columns">
                <label>スキャン性能</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_scan_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_scan_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="head_scan_min" list="list-head_scan">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="head_scan_max" list="list-head_scan">
             </div>
 
             <div class="two columns">
                <label>射撃安定性能</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_stab_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_stab_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_stab_min" list="list-arms_stab">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_stab_max" list="list-arms_stab">
             </div>
 
             <div class="two columns">
                <label>格納数</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_cap_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_cap_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="arms_cap_min" list="list-arms_cap">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="arms_cap_max" list="list-arms_cap">
             </div>
 
             <div class="two columns">
                <label>EN伝達率</label>
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="core_supp_min">
-               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="core_supp_max">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="min" id="core_supp_min" list="list-core_supp">
+               <input class="u-full-width" type="number" min="0" max="99999" value="" placeholder="max" id="core_supp_max" list="list-core_supp">
             </div>
          </div>
 
@@ -179,6 +185,405 @@
    <div class="container">
       Since 2018
    </div>
+</div>
+
+<div style="display: none;">
+   <datalist id="list-ke">
+         <option value="2231" label="威特タンジー(衝撃) - 2231">
+         <option value="1899" label="威特カレンデュラ(衝撃) - 1899">
+         <option value="1882" label="威特ランポ(衝撃) - 1882">
+         <option value="1785" label="威特タンジー - 1785">
+         <option value="1567" label="威特カルバス(衝撃) - 1567">
+         <option value="1520" label="威特カレンデュラ - 1520">
+         <option value="1507" label="威特板ショ(衝撃) - 1507">
+         <option value="1506" label="威特ランポ - 1506">
+         <option value="1254" label="威特カルバス - 1254">
+         <option value="1206" label="威特板ショ - 1206">
+         <option value="1191" label="命特カルバス(衝撃) - 1191">
+         <option value="1149" label="威特衝ショ(衝撃) - 1149">
+         <option value="953" label="命特カルバス - 953">
+         <option value="920" label="威特衝ショ - 920">
+   </datalist>
+
+   <datalist id="list-ce">
+         <option value="3239" label="威特ストレコ(衝撃) - 3239">
+         <option value="2739" label="威特UBR(衝撃) - 2739">
+         <option value="2592" label="威特ストレコ - 2592">
+         <option value="2478" label="威特ロータス(衝撃) - 2478">
+         <option value="2328" label="威特速特ストレコ(衝撃) - 2328">
+         <option value="2316" label="ディマプ(衝撃) - 2316">
+         <option value="2192" label="威特UBR - 2192">
+         <option value="1983" label="威特ロータス - 1983">
+         <option value="1969" label="速特UBR(衝撃) - 1969">
+         <option value="1863" label="威特速特ストレコ - 1863">
+         <option value="1853" label="ディマプ - 1853">
+         <option value="1781" label="速特ロータス(衝撃) - 1781">
+         <option value="1576" label="速特UBR - 1576">
+         <option value="1571" label="マスラ(衝撃) - 1571">
+         <option value="1425" label="速特ロータス - 1425">
+         <option value="1257" label="マスラ - 1257">
+   </datalist>
+
+   <datalist id="list-te">
+         <option value="3037" label="威特マハオン(Wアンプ,衝撃) - 3037">
+         <option value="2864" label="威力マハオン(Wアンプ,衝撃) - 2864">
+         <option value="2430" label="威特マハオン(Wアンプ) - 2430">
+         <option value="2291" label="威力マハオン(Wアンプ) - 2291">
+         <option value="2250" label="威特マハオン(Sアンプ,衝撃) - 2250">
+         <option value="2122" label="威力マハオン(Sアンプ,衝撃) - 2122">
+         <option value="1969" label="命特ナパ(Wアンプ,衝撃) - 1969">
+         <option value="1898" label="威特アラキデ(Wアンプ,衝撃) - 1898">
+         <option value="1800" label="威特マハオン(Sアンプ) - 1800">
+         <option value="1697" label="威力マハオン(Sアンプ) - 1697">
+         <option value="1667" label="威特マハオン(衝撃) - 1667">
+         <option value="1575" label="命特ナパ(Wアンプ) - 1575">
+         <option value="1572" label="威力マハオン(衝撃) - 1572">
+         <option value="1519" label="威特アラキデ(Wアンプ) - 1519">
+         <option value="1459" label="命特ナパ(Sアンプ,衝撃) - 1459">
+         <option value="1406" label="威特アラキデ(Sアンプ,衝撃) - 1406">
+         <option value="1334" label="威特マハオン - 1334">
+         <option value="1258" label="威力マハオン - 1258">
+         <option value="1167" label="命特ナパ(Sアンプ) - 1167">
+         <option value="1125" label="威特アラキデ(Sアンプ) - 1125">
+         <option value="1081" label="命特ナパ(衝撃) - 1081">
+         <option value="1042" label="威特アラキデ(衝撃) - 1042">
+         <option value="865" label="命特ナパ - 865">
+         <option value="834" label="威特アラキデ - 834">
+   </datalist>
+
+   <datalist id="list-head_stab">
+         <option value="1412" label="[CE]SIEGFRIED HD33 - 1412">
+         <option value="1392" label="[CE]BEOWULF HD103 - 1392">
+         <option value="1328" label="[CE]KT-1G/FUXI - 1328">
+         <option value="1302" label="[CE]PERSEUS HD225-2 - 1302">
+         <option value="1249" label="[CE]HERACLES HD226 - 1249">
+         <option value="1248" label="[TE]HD-21 SEALEYE - 1248">
+         <option value="1218" label="[CE]ACHILLEUS HD225 - 1218">
+         <option value="1198" label="[CE]D/HD226 - 1198">
+         <option value="1170" label="[CE]ROLAND HD41 - 1170">
+         <option value="1135" label="[KE]RUGERRO HD35 - 1135">
+         <option value="1094" label="[TE]HD-19 CHROMEYE - 1094">
+         <option value="1078" label="[KE]UHD-22 LANCELOT - 1078">
+         <option value="1073" label="[TE]KT-4G3/RUSLAN - 1073">
+         <option value="1051" label="[TE]KT-2G5/DOBRYNYA - 1051">
+         <option value="991" label="[TE]KT-2G3/ILYA - 991">
+         <option value="971" label="[TE]KT-2G2/VASSILY - 971">
+         <option value="971" label="[KE]HD-223 RAIKO - 971">
+         <option value="908" label="[KE]UHD-13 GALAHAD - 908">
+         <option value="872" label="[TE]UHD-15 KURMA - 872">
+         <option value="859" label="[KE]UHD-10/I ARTHUR - 859">
+         <option value="838" label="[KE]UHD-10/A GAWEIN - 838">
+         <option value="799" label="[TE]D/KT-2G3 - 799">
+         <option value="787" label="[KE]UHD-10 TRISTAN - 787">
+         <option value="768" label="[KE]D/UHD-10 - 768">
+   </datalist>
+
+   <datalist id="list-head_cam">
+         <option value="933" label="[CE]BEOWULF HD103 - 933">
+         <option value="885" label="[CE]ACHILLEUS HD225 - 885">
+         <option value="847" label="[CE]KT-1G/FUXI - 847">
+         <option value="842" label="[CE]PERSEUS HD225-2 - 842">
+         <option value="821" label="[CE]ROLAND HD41 - 821">
+         <option value="751" label="[CE]HERACLES HD226 - 751">
+         <option value="749" label="[TE]KT-2G5/DOBRYNYA - 749">
+         <option value="728" label="[TE]HD-19 CHROMEYE - 728">
+         <option value="702" label="[CE]D/HD226 - 702">
+         <option value="699" label="[TE]HD-21 SEALEYE - 699">
+         <option value="683" label="[KE]RUGERRO HD35 - 683">
+         <option value="642" label="[KE]UHD-10/I ARTHUR - 642">
+         <option value="621" label="[KE]UHD-13 GALAHAD - 621">
+         <option value="618" label="[CE]SIEGFRIED HD33 - 618">
+         <option value="599" label="[KE]HD-223 RAIKO - 599">
+         <option value="592" label="[KE]UHD-10/A GAWEIN - 592">
+         <option value="573" label="[KE]UHD-10 TRISTAN - 573">
+         <option value="571" label="[TE]KT-4G3/RUSLAN - 571">
+         <option value="554" label="[KE]D/UHD-10 - 554">
+         <option value="523" label="[TE]KT-2G2/VASSILY - 523">
+         <option value="511" label="[TE]D/KT-2G3 - 511">
+         <option value="508" label="[KE]UHD-22 LANCELOT - 508">
+         <option value="505" label="[TE]UHD-15 KURMA - 505">
+         <option value="472" label="[TE]KT-2G3/ILYA - 472">
+   </datalist>
+
+   <datalist id="list-head_scan">
+         <option value="198" label="[KE]RUGERRO HD35 - 198">
+         <option value="191" label="[KE]UHD-10/I ARTHUR - 191">
+         <option value="182" label="[CE]KT-1G/FUXI - 182">
+         <option value="173" label="[KE]UHD-10/A GAWEIN - 173">
+         <option value="170" label="[KE]UHD-10 TRISTAN - 170">
+         <option value="160" label="[CE]SIEGFRIED HD33 - 160">
+         <option value="150" label="[KE]HD-223 RAIKO - 150">
+         <option value="128" label="[TE]KT-4G3/RUSLAN - 128">
+         <option value="123" label="[KE]UHD-13 GALAHAD - 123">
+         <option value="115" label="[KE]D/UHD-10 - 115">
+         <option value="110" label="[TE]KT-2G5/DOBRYNYA - 110">
+         <option value="108" label="[CE]PERSEUS HD225-2 - 108">
+         <option value="105" label="[TE]HD-19 CHROMEYE - 105">
+         <option value="93" label="[CE]ACHILLEUS HD225 - 93">
+         <option value="84" label="[CE]HERACLES HD226 - 84">
+         <option value="83" label="[CE]D/HD226 - 83">
+         <option value="78" label="[CE]ROLAND HD41 - 78">
+         <option value="75" label="[TE]D/KT-2G3 - 75">
+         <option value="75" label="[TE]KT-2G2/VASSILY - 75">
+         <option value="73" label="[TE]KT-2G3/ILYA - 73">
+         <option value="65" label="[KE]UHD-22 LANCELOT - 65">
+         <option value="63" label="[CE]BEOWULF HD103 - 63">
+         <option value="52" label="[TE]HD-21 SEALEYE - 52">
+         <option value="50" label="[TE]UHD-15 KURMA - 50">
+   </datalist>
+
+   <datalist id="list-arms_stab">
+         <option value="199" label="[CE]KT-4S2/SVIR - 199">
+         <option value="193" label="[CE]KT-4S3/NARVA - 193">
+         <option value="185" label="[CE]ILMENAU AM28 - 185">
+         <option value="180" label="[CE]WESER AM29 - 180">
+         <option value="178" label="[CE]ELBE AM28-2 - 178">
+         <option value="177" label="[CE]D/AM29 - 177">
+         <option value="166" label="[KE]UAM-10/L - 166">
+         <option value="156" label="[TE]UAM-23 ANIMAS - 156">
+         <option value="146" label="[TE]UAM-23/I - 146">
+         <option value="139" label="[KE]GIRONDE AM107 - 139">
+         <option value="137" label="[KE]SEINE AM106 - 137">
+         <option value="135" label="[TE]KT-1S5/VOLGA - 135">
+         <option value="132" label="[KE]UAM-10/A - 132">
+         <option value="128" label="[TE]D/KT-1S - 128">
+         <option value="125" label="[KE]D/UAM-10 - 125">
+         <option value="124" label="[TE]KT-1S4/ILKUT - 124">
+         <option value="122" label="[KE]UAM-10 SEVERN - 122">
+         <option value="120" label="[TE]KT-1S/AMUR - 120">
+   </datalist>
+
+   <datalist id="list-core_supp">
+         <option value="160" label="[CE]HERMES CR212 - 160">
+         <option value="142" label="[TE]KT-105 - 142">
+         <option value="140" label="[CE]ZEUS CR210 - 140">
+         <option value="135" label="[CE]ARES CR211 - 135">
+         <option value="125" label="[KE]UCR-10/A - 125">
+         <option value="125" label="[KE]UCR-10/L AGNI - 125">
+         <option value="125" label="[CE]D/CR210 - 125">
+         <option value="120" label="[KE]SURT CR114 - 120">
+         <option value="120" label="[CE]KT-303/YINGLONG - 120">
+         <option value="115" label="[KE]UCR-10/I - 115">
+         <option value="115" label="[CE]KT-304/XIEZHI - 115">
+         <option value="113" label="[TE]KT-106/DAZHBOG - 113">
+         <option value="110" label="[CE]KT-302 - 110">
+         <option value="108" label="[TE]KT-104/PERUN - 108">
+         <option value="105" label="[TE]KT-103 - 105">
+         <option value="100" label="[KE]OSTARA CR113 - 100">
+         <option value="100" label="[KE]JOTUN CR113-2 - 100">
+         <option value="95" label="[KE]WODAN CR110 - 95">
+         <option value="90" label="[TE]UCR-25/D RATRI - 90">
+         <option value="90" label="[TE]D/KT-103 - 90">
+         <option value="85" label="[TE]UCR-25/A DURGA - 85">
+         <option value="85" label="[KE]D/UCR-10 - 85">
+         <option value="70" label="[TE]UCR-25 - 70">
+   </datalist>
+
+   <datalist id="list-legs_move-2LEGS-L">
+         <option value="7779" label="ULG-09/L - 7779">
+         <option value="7348" label="ULG-09 SNOWDON - 7348">
+         <option value="7106" label="ULG-20/L - 7106">
+         <option value="6532" label="ULG-10/L - 6532">
+   </datalist>
+
+   <datalist id="list-legs_move-2LEGS-M">
+         <option value="6833" label="ULG-09/A - 6833">
+         <option value="6606" label="ULG-20 SHASTA - 6606">
+         <option value="6345" label="ULG-21 - 6345">
+         <option value="6223" label="ULG-11 RAINIER - 6223">
+         <option value="6084" label="JORASSES LG104 - 6084">
+         <option value="6001" label="ULG-10/A DENALI - 6001">
+         <option value="5723" label="VENTOUX LG105 - 5723">
+         <option value="5689" label="CINTO LG104-2 - 5689">
+         <option value="5412" label="D/ULG-10 - 5412">
+   </datalist>
+
+   <datalist id="list-legs_move-2LEGS-H">
+         <option value="5204" label="ULG-05 TOLIMA - 5204">
+         <option value="4708" label="ULG-06 - 4708">
+         <option value="4585" label="ULG-05/A - 4585">
+         <option value="4248" label="KT-3N4 - 4248">
+         <option value="4005" label="KT-4N4/EMEI - 4005">
+         <option value="3894" label="KT-3N2/BARGUZIN - 3894">
+         <option value="3822" label="KT-4N3/JIUHUA - 3822">
+         <option value="3821" label="KT-4N2 - 3821">
+         <option value="3689" label="D/KT-3N - 3689">
+   </datalist>
+
+   <datalist id="list-legs_move-REVERSE-JOIN-L">
+         <option value="6222" label="ULG-30 RUIZ - 6222">
+         <option value="5798" label="ULG-30/L - 5798">
+         <option value="5483" label="ULG-31 HUILA - 5483">
+   </datalist>
+
+   <datalist id="list-legs_move-REVERSE-JOIN-H">
+         <option value="5110" label="ODENWALD LG210 - 5110">
+         <option value="4656" label="KT-2N2/WUTAI - 4656">
+         <option value="4525" label="WURMBERG LG209 - 4525">
+         <option value="4136" label="KT-2N3/PUTUO - 4136">
+         <option value="4040" label="EIFEL LG210-2 - 4040">
+         <option value="3996" label="CANTABRICA LG19 - 3996">
+         <option value="3888" label="MORENA LG15 - 3888">
+         <option value="3244" label="GUADALUPE LG18 - 3244">
+   </datalist>
+
+   <datalist id="list-legs_move-4LEGS">
+         <option value="4725" label="KT-4N2/BELUKHA - 4725">
+         <option value="4031" label="KT-4N - 4031">
+         <option value="3445" label="ORTIGARA LG664 - 3445">
+         <option value="3125" label="ZONCOLAN LG663 - 3125">
+         <option value="2915" label="GRAPPA LG665 - 2915">
+         <option value="2405" label="VISO LG664-2 - 2405">
+         <option value="2197" label="D/LG665 - 2197">
+   </datalist>
+
+   <datalist id="list-legs_move-TANK">
+         <option value="3399" label="KT-1N2/ELBRUS - 3399">
+         <option value="2987" label="ULG-92 VINDHYA - 2987">
+         <option value="2884" label="KT-1N/BAIKAL - 2884">
+         <option value="2575" label="ULG-93 SATPURA - 2575">
+         <option value="2369" label="D/KT-1N - 2369">
+         <option value="2254" label="ULG-93/D - 2254">
+         <option value="2061" label="ULG-93/A - 2061">
+   </datalist>
+
+   <datalist id="list-legs_stab-2LEGS-L">
+         <option value="836" label="ULG-10/L - 836">
+         <option value="703" label="ULG-20/L - 703">
+         <option value="608" label="ULG-09 SNOWDON - 608">
+         <option value="512" label="ULG-09/L - 512">
+   </datalist>
+
+   <datalist id="list-legs_stab-2LEGS-M">
+         <option value="916" label="ULG-10/A DENALI - 916">
+         <option value="889" label="ULG-11 RAINIER - 889">
+         <option value="874" label="CINTO LG104-2 - 874">
+         <option value="817" label="D/ULG-10 - 817">
+         <option value="803" label="ULG-21 - 803">
+         <option value="791" label="JORASSES LG104 - 791">
+         <option value="788" label="VENTOUX LG105 - 788">
+         <option value="775" label="ULG-20 SHASTA - 775">
+         <option value="746" label="ULG-09/A - 746">
+   </datalist>
+
+   <datalist id="list-legs_stab-2LEGS-H">
+         <option value="1365" label="KT-4N2 - 1365">
+         <option value="1352" label="KT-4N4/EMEI - 1352">
+         <option value="1098" label="KT-4N3/JIUHUA - 1098">
+         <option value="1064" label="ULG-05 TOLIMA - 1064">
+         <option value="962" label="ULG-06 - 962">
+         <option value="938" label="ULG-05/A - 938">
+         <option value="884" label="KT-3N4 - 884">
+         <option value="853" label="KT-3N2/BARGUZIN - 853">
+         <option value="815" label="D/KT-3N - 815">
+   </datalist>
+
+   <datalist id="list-legs_stab-REVERSE-JOIN-L">
+         <option value="1686" label="ULG-30/L - 1686">
+         <option value="1638" label="ULG-30 RUIZ - 1638">
+         <option value="1402" label="ULG-31 HUILA - 1402">
+   </datalist>
+
+   <datalist id="list-legs_stab-REVERSE-JOIN-H">
+         <option value="1932" label="KT-2N3/PUTUO - 1932">
+         <option value="1778" label="MORENA LG15 - 1778">
+         <option value="1744" label="KT-2N2/WUTAI - 1744">
+         <option value="1588" label="CANTABRICA LG19 - 1588">
+         <option value="1506" label="GUADALUPE LG18 - 1506">
+         <option value="1414" label="ODENWALD LG210 - 1414">
+         <option value="1377" label="EIFEL LG210-2 - 1377">
+         <option value="1266" label="WURMBERG LG209 - 1266">
+   </datalist>
+
+   <datalist id="list-legs_stab-4LEGS">
+         <option value="1612" label="VISO LG664-2 - 1612">
+         <option value="1480" label="ORTIGARA LG664 - 1480">
+         <option value="1433" label="ZONCOLAN LG663 - 1433">
+         <option value="1402" label="GRAPPA LG665 - 1402">
+         <option value="1365" label="KT-4N - 1365">
+         <option value="1303" label="KT-4N2/BELUKHA - 1303">
+         <option value="1048" label="D/LG665 - 1048">
+   </datalist>
+
+   <datalist id="list-legs_stab-TANK">
+         <option value="1315" label="ULG-93/D - 1315">
+         <option value="1104" label="ULG-93/A - 1104">
+         <option value="1058" label="ULG-92 VINDHYA - 1058">
+         <option value="1002" label="ULG-93 SATPURA - 1002">
+         <option value="933" label="KT-1N/BAIKAL - 933">
+         <option value="909" label="KT-1N2/ELBRUS - 909">
+         <option value="857" label="D/KT-1N - 857">
+   </datalist>
+
+   <datalist id="list-legs_turn-2LEGS-L">
+         <option value="9998" label="ULG-20/L - 9998">
+         <option value="9653" label="ULG-09 SNOWDON - 9653">
+         <option value="9348" label="ULG-09/L - 9348">
+         <option value="9136" label="ULG-10/L - 9136">
+   </datalist>
+
+   <datalist id="list-legs_turn-2LEGS-M">
+         <option value="8599" label="JORASSES LG104 - 8599">
+         <option value="8086" label="ULG-20 SHASTA - 8086">
+         <option value="7986" label="ULG-09/A - 7986">
+         <option value="7896" label="ULG-21 - 7896">
+         <option value="7841" label="ULG-11 RAINIER - 7841">
+         <option value="7603" label="VENTOUX LG105 - 7603">
+         <option value="7569" label="CINTO LG104-2 - 7569">
+         <option value="7415" label="ULG-10/A DENALI - 7415">
+         <option value="7278" label="D/ULG-10 - 7278">
+   </datalist>
+
+   <datalist id="list-legs_turn-2LEGS-H">
+         <option value="8822" label="ULG-06 - 8822">
+         <option value="8003" label="ULG-05 TOLIMA - 8003">
+         <option value="7707" label="ULG-05/A - 7707">
+         <option value="7563" label="KT-3N4 - 7563">
+         <option value="7288" label="KT-3N2/BARGUZIN - 7288">
+         <option value="7103" label="KT-4N4/EMEI - 7103">
+         <option value="7012" label="KT-4N2 - 7012">
+         <option value="6885" label="KT-4N3/JIUHUA - 6885">
+         <option value="6721" label="D/KT-3N - 6721">
+   </datalist>
+
+   <datalist id="list-legs_turn-REVERSE-JOIN-L">
+         <option value="7296" label="ULG-30/L - 7296">
+         <option value="6624" label="ULG-30 RUIZ - 6624">
+         <option value="6398" label="ULG-31 HUILA - 6398">
+   </datalist>
+
+   <datalist id="list-legs_turn-REVERSE-JOIN-H">
+         <option value="6272" label="ODENWALD LG210 - 6272">
+         <option value="5846" label="KT-2N3/PUTUO - 5846">
+         <option value="5596" label="KT-2N2/WUTAI - 5596">
+         <option value="5376" label="CANTABRICA LG19 - 5376">
+         <option value="5041" label="WURMBERG LG209 - 5041">
+         <option value="5012" label="MORENA LG15 - 5012">
+         <option value="4728" label="EIFEL LG210-2 - 4728">
+         <option value="4478" label="GUADALUPE LG18 - 4478">
+   </datalist>
+
+   <datalist id="list-legs_turn-4LEGS">
+         <option value="6064" label="ORTIGARA LG664 - 6064">
+         <option value="5950" label="KT-4N2/BELUKHA - 5950">
+         <option value="5798" label="ZONCOLAN LG663 - 5798">
+         <option value="5712" label="KT-4N - 5712">
+         <option value="5355" label="GRAPPA LG665 - 5355">
+         <option value="5236" label="D/LG665 - 5236">
+         <option value="4641" label="VISO LG664-2 - 4641">
+   </datalist>
+
+   <datalist id="list-legs_turn-TANK">
+         <option value="5651" label="ULG-92 VINDHYA - 5651">
+         <option value="5274" label="KT-1N2/ELBRUS - 5274">
+         <option value="5007" label="KT-1N/BAIKAL - 5007">
+         <option value="4661" label="ULG-93 SATPURA - 4661">
+         <option value="4641" label="ULG-93/D - 4641">
+         <option value="4422" label="D/KT-1N - 4422">
+         <option value="4403" label="ULG-93/A - 4403">
+   </datalist>
+
+
 </div>
 
 <script src="js/parts.js"></script>
