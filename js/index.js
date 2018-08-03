@@ -65,6 +65,7 @@ function loadCondition() {
 
    if (condition.legs_type != null) {
       document.querySelector('#legs_type').selectedIndex = legsTypes[condition.legs_type] | 0;
+      toggleDatalist(condition.legs_type);
    };
 
    var keys = 'ap,ke,ce,te,en,weight_cap,stab,legs_move,legs_stab,legs_turn,head_stab,head_cam,head_scan,arms_stab,arms_cap,core_supp'.split(',');

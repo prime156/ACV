@@ -37,12 +37,9 @@ h1, h2, h3, h4, h5, h6 {
    text-align: right;
 }
 
-.result {
+#table {
    overflow-x: scroll;
    min-height: 480px;
-}
-
-#table {
    margin-left: 1rem;
    margin-right: 1rem;
 }
